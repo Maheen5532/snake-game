@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto Mono", monospace;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: gray;
+
+    }
+    .wrapper{
+        width: 70vmin;
+        height: 75vmin;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        background: #413f3f;
+        overflow: hidden;
+    }
+    .game-details{
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 1.25rem 1.3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .play-board{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: repeat(30, 1fr) / repeat( 30, 1fr) ;
+        background: #000;
+    }
+    .play-board .food{
+        background: red;
+        border: 1px solid red;
+    }
+    .play-board .head{
+        background: darkgreen;
+        border: 1px solid darkgreen;
+    }
+    .play-board .body {
+    background: lightgreen;
+    border: 1px solid darkgreen; 
+}
+.controls{
+    display: flex;
+    justify-content: center;
+}
+.controls i{
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    width: calc(100%/4);
+    border-right: 1px solid black;
+}
+@media screen and (max-width: 800px){
+    .wrapper{
+        width: 90vmin;
+        height: 100vmin;
+    }
+    .game-details{
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .controls{
+        display: flex;
+    }
+    .controls i {
+        padding: 15px 0;font-size: 1rem;
+    }
+}
